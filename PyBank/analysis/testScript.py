@@ -15,3 +15,4 @@ def budget_data(filepath):
     header = next(csvreader)
 
     for months in range(profit):
+        
