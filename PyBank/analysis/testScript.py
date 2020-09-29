@@ -3,27 +3,32 @@ import os
 import csv
 
 # set path for file
-csvpath = os.path.join("..", "Resources", "budget_data.csv")
+budget_data = os.path.join("..", "Resources", "budget_data.csv")
 
-# Variables
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-
+# Create Lists
+total_months = []
+total_profit_loss = []
+average_profit_loss = []
 
 # Open the CSV
-def budget_data(filepath):
-    with open(budget_data, "r") as csvfile:
-        csvreader = csv.reader(csvpath, delimiter=",")
+with open(budget_data, encoding='utf-8') as csvfile: 
+        csvreader = csv.reader(csvfile, delimiter=",")
 
-    csvheader = next(budget_data)
+# Skip Headers
+        header = next(csvreader)
 
-    row = 0
-    average = sum([row(1)]) / len([row(1)])
+for row in csvreader:
+    total_months.append(row[0])
+    total_profit_loss.append(int(row[1]))
+    average_profit_loss = sum(int[row(1)]) / len([row(1)])
 
+#Print Statements
+print("Financial Analysis")
+print("-----------------------------")
+print(f"Total Months: {len(total_months)}")
 
-    for months in csvreader:
-        if row[0] == months('....'):
-            total = total + 1
-            print (total)
-
-        print(sum[row(1)])
-        print(average)
+#variable for output file
+pybank_analysis = os.path.join("Pybank_final.txt")
+#export text file
+#with open(pybank_analysis, "w") as txtfile
+#writer = txt.writer(txtfile)
