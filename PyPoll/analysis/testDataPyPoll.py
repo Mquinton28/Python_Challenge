@@ -3,12 +3,11 @@ import os
 import csv
 
 # set path for file
-election_data = os.path.join("..", "Resources", "02-Homework_03-Python_Instructions_PyBank_Resources_election_data.csv")
+election_data = os.path.join("..","PyPoll", "Resources", "election_data.csv")
 
 # create lists
 total_votes = []
-candidates = []
-results = []
+candidate = []
 percentage_of_votes = []
 
 # open csv
@@ -16,8 +15,10 @@ with open(election_data) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     header = next(csvreader)
     for row in csvreader:
-        total_votes.append(row[0])
-        candidates.append(str(row[2])
+        total_votes.append(row[0]) = total_votes + 1
+        candidate.append(str(row[2])
+
+#if candidate == "O'Tooley":
 
 # max = 0
 # min = 0
