@@ -17,9 +17,9 @@ with open(election_data) as csvfile:
         total_votes.append(row[0])
         candidates.appeend(str(row[2])
 
-max = 0
-min = 0
-max_index = 0
-min_index = 0
+        print("Election Results")
 
-#Print Statemenets
+# max = 0
+# min = 0
+# max_index = 0
+# min_index = 0
