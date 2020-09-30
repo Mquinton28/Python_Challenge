@@ -36,8 +36,6 @@ for cur_index, cur_profit_loss in enumerate(total_profit_loss):
 
 
 average_profit_loss = sum(total_profit_loss) / len(total_profit_loss)
-#greatest_profit_increase = max(total_profit_loss)
-#greatest_profit_decrease = min(total_profit_loss)
 
 #Print Statements
 print("Financial Analysis")
@@ -55,4 +53,11 @@ pybank_analysis = os.path.join("Pybank_final.txt")
 with open(pybank_analysis, "w") as txtfile:
         txtfile.write("FinalScript")
         txtfile.write("Financial Analysis")
+        txtfile.write("----------------------------")
+        txtfile.write(f"Total Months: {len(total_months)}")
+        txtfile.write(f"Total: ${sum(total_profit_loss)}")
+        txtfile.write(f"Average Change: ${round(average_profit_loss, 2)}")
+        txtfile.write(f"Greatest Profit Increase: {total_months[max_index],max}")
+        txtfile.write(f"Greatest Profit Decrease: {total_months[min_index], min}")
+
 
