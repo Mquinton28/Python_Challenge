@@ -1,0 +1,1 @@
+FinalScriptFinancial Analysis----------------------------Total Months: 86Total: $38382578Average Change: $446309.05Greatest Profit Increase: ('Feb-2012', 1170593)Greatest Profit Decrease: ('Sep-2013', -1196225)
